@@ -53,7 +53,7 @@ Opportunities
 
 - Tani produkt
 - Szybka dostępność
-- Błyskawiczny czas działania (prostota == prędkość)
+- Błyskawiczny czas działania
 - Możliwość customizacji
 - Proste tanie aplikacje, są preferowane na rynku
 - Nie ma żadnych zagrożeń ze strony prawa - nie łamiemy żadnych praw
