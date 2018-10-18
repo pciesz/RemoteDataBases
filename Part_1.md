@@ -3,22 +3,24 @@
 ## Opis pomysłu
 
 Celem projektu jest stworzenie aplikacji internetowej która będzie pozwalała na udostępnianie oraz pobieranie danych z bazy (Remote File System), co pozwoli firmom przechowywać pewne informacje w bezpiecznym zamkniętym systemie.
-Dostęp będzie przyznawany według potrzeb klienta (odbiorcy produktu). Pracownicy klienta będą mieli opcje udostępniania różnych plików - w wypadku tego zadania celem będą faktury, dostępne do pobrania, przypisane do klientów (naszego klienta). Dostęp do własnych danych użytkownik będzie miał po zalogowaniu do systemu. // gdzie dostęp do logowania jest przyznawany od górnie - o tym niżej).
+Dostęp będzie przyznawany według potrzeb klienta (odbiorcy produktu). Pracownicy klienta będą mieli opcje udostępniania różnych plików - w wypadku tego zadania celem będą faktury, dostępne do pobrania, przypisane do klientów (naszego klienta). Dostęp do własnych danych użytkownik będzie miał po zalogowaniu do systemu.
 W projekcie będziemy chcieli zrealizować dostęp do serwera, poprzez webowy interfejs (strona internetowa) oraz systemu zarządzania plikami, powiązanych linkiem do systemu plików.
 
 ## Przewidywane technologie
+Po stronie serwera:
 
-Po stornie serwera:
-- Django 
+- Django
 - Linux x86_64
 - PostgreSQL
 
 Po stornie klienta:
+
 - HTML
-- CSS 
+- CSS
 
 Technologie opcjonalne:
-- RESt api
+
+- REST api
 - JSON impl.
 
 ## Motywacja
@@ -33,6 +35,7 @@ Dzięki temu klient dostanie tani, łatwo konfigurowalny produkt bazowy, a dodat
 ## Analiza SWOT
 
 Strenghts
+
 - Prosta implementacja
 - Solidna baza do dalszego rozwoju
 - Łatwe do zrozumienia, noew osoby będą mogły równolegle realizować inne projekty
@@ -71,7 +74,7 @@ Threats
 - 15.11.2018 - Implementacja i walidacja, „wdrożenie u klienta”, czyli w pracowni komputerowej.
 - 29.11.2018 - Prezentacja na forum publicznym i zaliczenie całości.
 
-# Kosztorys
+##Kosztorys
 
 Rzeczywisty koszt realizowanego projektu, przy nieuwzględnieniu poświęconego na niego czasu, będzie zerowy. Przy realnym wdrożeniu należy uwzględnić czas poświęcony na implementację produktu, koszty związane z obsługą klienta oraz zakup/utrzymanie serwera. 
 
