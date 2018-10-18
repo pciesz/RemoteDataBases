@@ -68,13 +68,13 @@ Threats
 - Klient może sam zrobić sobie krzywdę, udostępniając ważne dane złej osobie
 - Ciągły support aplikacji
 
-##Harmonogram prac
+## Harmonogram prac
 - 18.10.2018 - Przygotowanie i uzasadnienie potrzeby realizacji. Analiza problemu.
 - 29.10.2018 - Faza projektowa
 - 15.11.2018 - Implementacja i walidacja, „wdrożenie u klienta”, czyli w pracowni komputerowej.
 - 29.11.2018 - Prezentacja na forum publicznym i zaliczenie całości.
 
-##Kosztorys
+## Kosztorys
 
 Rzeczywisty koszt realizowanego projektu, przy nieuwzględnieniu poświęconego na niego czasu, będzie zerowy. Przy realnym wdrożeniu należy uwzględnić czas poświęcony na implementację produktu, koszty związane z obsługą klienta oraz zakup/utrzymanie serwera. 
 
