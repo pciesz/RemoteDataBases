@@ -30,7 +30,7 @@ Dzięki temu klient dostanie tani, łatwo konfigurowalny produkt bazowy, a dodat
 
 ## Potencjalne problemy przy wdrażaniu
 
-- Potencjalna możliwość zmniejszenia elasteczności aplikacji przez dostosowanie podstawowego produktu do określonej kunkcjonalności (w tym przypadku obsługa faktur)
+- Potencjalna możliwość zmniejszenia elasteczności aplikacji przez dostosowanie podstawowego produktu do określonej funkcjonalności (w tym przypadku obsługa faktur)
 
 ## Analiza SWOT
 
