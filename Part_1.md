@@ -3,9 +3,13 @@
 ## Opis pomysłu
 
 Celem projektu jest stworzenie aplikacji internetowej, która będzie realizować określone funkcjonalności w firmie klienta z uwzględnieniem łatwości dalszej rozbudowy.
+
 Podstawą tej aplikacji będzie system zarządzania pracownikami oraz klientami firmy - zarządzanie dostępem, podstawowymi danymi personalnymi oraz udostępnionymi funkcjami.
+
 Podstawową funkcjonalnością będzie dostęp do faktur wystawionych klientom. Klient, któremu pracownik nadał dostęp do tych zasobów, może samodzielnie pobierać udostępnione faktury. Pracownicy z kolei mogą nadawać ten dostęp, oraz umieszczać faktury w systemie, wraz z przypisaniem do określonego użytkownika.
+
 Drugą rzeczą do zaimplementowania jest system powiadomień. Klient może otrzymać powiadomienie wysłane przez pracownika do niego, bądź do wszystkich klientów.
+
 Trzecią będzie proste forum. Możliwość tworzenia wątków, udzielania się w nich, jeden poziom kategorii tematycznych.
 
 ## Przewidywane technologie
@@ -80,7 +84,12 @@ Do wykonania projektu porzebujemy:
 
 ## Kosztorys
 
->TODO
-
-Rzeczywisty koszt realizowanego projektu, przy nieuwzględnieniu poświęconego na niego czasu, będzie zerowy. Przy realnym wdrożeniu należy uwzględnić czas poświęcony na implementację produktu, koszty związane z obsługą klienta oraz zakup/utrzymanie serwera. 
+Tworzenie aplikacji i wdrożenie: 60h * 40zł = 2400zł
+Utrzymanie wdrożenia u klienta (1 rok): 20h * 40zł = 800zł
+Komputery - prywatne: 0zł
+Serwer (1 rok): 360zł
+Django: 0zł
+Linux: 0zł
+PostgreSQL: 0zł
+Suma (wykonanie + 1 rok utrzymania): 3560zł
 
