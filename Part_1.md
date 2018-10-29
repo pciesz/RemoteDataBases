@@ -1,10 +1,12 @@
-# Uniwersalna aplikacja przechowująca dane klienta, umożliwiająca ich udostępnianie użytkownikom systemu.
+# System wspierający działanie firmy w warstwie informacyjnej
 
 ## Opis pomysłu
 
-Celem projektu jest stworzenie aplikacji internetowej która będzie pozwalała na udostępnianie oraz pobieranie danych z bazy (Remote File System), co pozwoli firmom przechowywać pewne informacje w bezpiecznym zamkniętym systemie.
-Dostęp będzie przyznawany według potrzeb klienta (odbiorcy produktu). Pracownicy klienta będą mieli opcje udostępniania różnych plików - w wypadku tego zadania celem będą faktury, dostępne do pobrania, przypisane do klientów (naszego klienta). Dostęp do własnych danych użytkownik będzie miał po zalogowaniu do systemu.
-W projekcie będziemy chcieli zrealizować dostęp do serwera, poprzez webowy interfejs (strona internetowa) oraz systemu zarządzania plikami, powiązanych linkiem do systemu plików.
+Celem projektu jest stworzenie aplikacji internetowej, która będzie realizować określone funkcjonalności w firmie klienta z uwzględnieniem łatwości dalszej rozbudowy.
+Podstawą tej aplikacji będzie system zarządzania pracownikami oraz klientami firmy - zarządzanie dostępem, podstawowymi danymi personalnymi oraz udostępnionymi funkcjami.
+Podstawową funkcjonalnością będzie dostęp do faktur wystawionych klientom. Klient, któremu pracownik nadał dostęp do tych zasobów, może samodzielnie pobierać udostępnione faktury. Pracownicy z kolei mogą nadawać ten dostęp, oraz umieszczać faktury w systemie, wraz z przypisaniem do określonego użytkownika.
+Drugą rzeczą do zaimplementowania jest system powiadomień. Klient może otrzymać powiadomienie wysłane przez pracownika do niego, bądź do wszystkich klientów.
+Trzecią będzie proste forum. Możliwość tworzenia wątków, udzielania się w nich, jeden poziom kategorii tematycznych.
 
 ## Przewidywane technologie
 Po stronie serwera:
@@ -13,7 +15,7 @@ Po stronie serwera:
 - Linux x86_64
 - PostgreSQL
 
-Po stornie klienta:
+Po stronie klienta:
 
 - HTML
 - CSS
@@ -23,58 +25,62 @@ Technologie opcjonalne:
 - REST api
 - JSON impl.
 
-## Motywacja
-
-Projekt jest prosty w założeniach, aby mógł być jak najbardziej uniwersalny - kazdy klient będzie mógł zamówić własne udogodnienia do strony (forma rejestracji, forum, obsługa zgłoszeń, etc.). Dzieki temu nie tyle klient zostanie zalany ilością opcji, a dostanie zalew możliwości, które może wykorzystać na swojej stronie.
-Dzięki temu klient dostanie tani, łatwo konfigurowalny produkt bazowy, a dodatkowe funkcjonalności będzie mógł dokupić (w dowolnym momencie), a my będziemy mieli dobrą bazę do rozbudowy aplikacji, możliwie małym kosztem.
-
-## Potencjalne problemy przy wdrażaniu
-
-- Potencjalna możliwość zmniejszenia elasteczności aplikacji przez dostosowanie podstawowego produktu do określonej funkcjonalności (w tym przypadku obsługa faktur)
-
 ## Analiza SWOT
 
 Strenghts
 
-- Prosta implementacja
-- Solidna baza do dalszego rozwoju
-- Łatwe do zrozumienia, noew osoby będą mogły równolegle realizować inne projekty
-- Popularne technologie
-- Wysoki zarobek na godzinie pracy
-- Łatwa testowalność
-- Nie wymaga specjalnego sprzętu
+- Możliwość modułowego rozwoju aplikacji.
+- Popularne technologie ułatwiają proces tworzenia, wdrożenia oraz utrzymania aplikacji.
+- Nawet przy oferowaniu niskich cen będziemy w stanie zreważnować to wielkością sprzedaży.
+- Łatwa testowalność (dzięki popularnym technologiom i prostym rozwiązaniom).
+- Nie wymaga specjalistycznego sprzętu.
 - Niewielki koszt wykonania
 
 Weaknesses
 
-- Nastąpi rozrost gałęzi - Każda sprzedaż to osobny produkt.
-- Brak doświadczenia w web dev'ie
-- Brak funduszy
+- Krótki czas realizacji projektu.
+- Brak doświadczenia w web dev'ie.
+- Brak funduszy.
 
 Opportunities
 
-- Tani produkt
-- Szybka dostępność
-- Błyskawiczny czas działania
-- Możliwość customizacji
-- Proste tanie aplikacje są preferowane na rynku
+- Możliwość zmiejszenia zatrudnienia pracowników.
+- Proste oraz tanie aplikacje są preferowane na rynku
 - Nie ma żadnych zagrożeń ze strony prawa - nie łamiemy żadnych praw
-- Ciągłość zlecenia
+- Utrzymanie klienta (firmy) przez dłuższy czas poprzez dostarczanie zintegorwanego systemu, z możliwością elastycznej rozbudowy.
 
 Threats
 
-- Nasycony rynek
-- Wyspecjalizowana funkcjonalność
-- Klient może sam zrobić sobie krzywdę, udostępniając ważne dane złej osobie
+- Potencjalna konieczność zatrudnienia dodatkowej osoby do obsługi programu.
+- Nasycony rynek.
+- Wyspecjalizowana funkcjonalność finalnego produktu dla poszczególnych firm.
 - Ciągły support aplikacji
 
 ## Harmonogram prac
+
 - 18.10.2018 - Przygotowanie i uzasadnienie potrzeby realizacji. Analiza problemu.
 - 29.10.2018 - Faza projektowa
 - 15.11.2018 - Implementacja i walidacja, „wdrożenie u klienta”, czyli w pracowni komputerowej.
 - 29.11.2018 - Prezentacja na forum publicznym i zaliczenie całości.
 
+## Techniczna wykonalność projektu
+
+Do wykonania projektu porzebujemy:
+
+- Czas i umiejętności potrzebne do:
+	- stworzenia aplikacji (programiści, projektanci, etc.)
+	- utrzymania wdrożenia u klienta.
+- Sprzęt:
+	- komputery do tworzenia aplikacji
+	- serwer do hostowania aplikacji u klienta
+- Oprogramowanie:
+	- Django
+	- System operacyjny (Linux)
+	- baza danych (PostgreSQL)
+
 ## Kosztorys
+
+>TODO
 
 Rzeczywisty koszt realizowanego projektu, przy nieuwzględnieniu poświęconego na niego czasu, będzie zerowy. Przy realnym wdrożeniu należy uwzględnić czas poświęcony na implementację produktu, koszty związane z obsługą klienta oraz zakup/utrzymanie serwera. 
 
