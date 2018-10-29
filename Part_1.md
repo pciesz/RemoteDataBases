@@ -84,12 +84,13 @@ Do wykonania projektu porzebujemy:
 
 ## Kosztorys
 
-Tworzenie aplikacji i wdrożenie: 60h * 40zł = 2400zł
-Utrzymanie wdrożenia u klienta (1 rok): 20h * 40zł = 800zł
-Komputery - prywatne: 0zł
-Serwer (1 rok): 360zł
-Django: 0zł
-Linux: 0zł
-PostgreSQL: 0zł
+- Tworzenie aplikacji i wdrożenie: 60h * 40zł = 2400zł
+- Utrzymanie wdrożenia u klienta (1 rok): 20h * 40zł = 800zł
+- Komputery - prywatne: 0zł
+- Serwer (1 rok): 360zł
+- Django: 0zł
+- Linux: 0zł
+- PostgreSQL: 0zł
+
 Suma (wykonanie + 1 rok utrzymania): 3560zł
 
