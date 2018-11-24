@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
     'invoice.apps.InvoiceConfig',
+    'notification.apps.NotificationConfig',
 ]
 
 MIDDLEWARE = [
