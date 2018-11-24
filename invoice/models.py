@@ -12,10 +12,10 @@ class Visitation(models.Model):
 
 
 class Invoice(models.Model):
-    issuingUser = models.ForeignKey(User, related_name="issuer", on_delete=models.CASCADE)
-    receivingUser = models.ForeignKey(User, related_name="receiver", on_delete=models.CASCADE)
+    issuingUser = models.ForeignKey(User, related_name="issuer", on_delete=models.DO_NOTHING)
+    receivingUser = models.ForeignKey(User, related_name="receiver", on_delete=models.DO_NOTHING)
 
     date = models.DateField()
     invoicePath = models.CharField(max_length=500)
 
-    visitation = models.ForeignKey(Visitation, on_delete=models.CASCADE)
+    visitation = models.ForeignKey(Visitation, on_delete=models.DO_NOTHING)
