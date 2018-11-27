@@ -1,1 +1,27 @@
-<h1>Welcome {{ user.username }}!</h1>
+{% if user.is_authenticated %}
+    <h1>Welcome {{ user.username }}!</h1>
+    <Table>
+        <tr>
+            <th>Username</th>
+            <th>{{ user.username }}</th>
+
+        </tr>
+        <tr>
+            <th>Firstname</th>
+            <th>{{ user.first_name }}</th>
+        </tr>
+        <tr>
+            <th>Lastname</th>
+            <th>{{ user.last_name }}</th>
+        </tr>
+        <tr>
+            <th>Mail</th>
+            <th>{{ user.email }}</th>
+        </tr>
+    </Table>
+    {% if user.username == "admin" %}
+        <a href="/user/list">Go to list</a>
+    {% endif %}
+{% else %}
+    <h1>Login first...</h1>
+{% endif %}

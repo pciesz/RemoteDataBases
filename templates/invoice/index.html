@@ -1,1 +1,20 @@
 <h1>Here are invoices connected to your profile : </h1>
+<body>
+<table>
+
+    <tr>
+        <th>Issuer</th>
+        <th>Receiver</th>
+        <th>date</th>
+        <th>Invoice path</th>
+    </tr>
+    {% for invoice in invoices %}
+        <tr>
+            <th>{{ invoice.issuingUser }}</th>
+            <th>{{ invoice.receivingUser }}</th>
+            <th>{{ invoice.date }}</th>
+            <th>{{ invoice.invoicePath }}</th>
+        </tr>
+    {% endfor %}
+</table>
+</body>

@@ -3,17 +3,18 @@
 {% else %}
     <h1>Administration view:</h1>
     <table>
-            <tr>
-                <th>Username</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>E-mail</th>
-            </tr>
+        <tr>
+            <th>Username</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>E-mail</th>
+        </tr>
         {% for user in users %}
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age</th>
+                <th>{{ user.username }}</th>
+                <th>{{ user.first_name }}</th>
+                <th>{{ user.last_name }}</th>
+                <th>{{ user.email }}</th>
             </tr>
         {% endfor %}
     </table>

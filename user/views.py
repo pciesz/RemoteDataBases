@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
@@ -17,8 +18,9 @@ def index(request):
 
 def List(request):
     template = loader.get_template('user/list.html')
+    user_list = User.objects.all()
     context = {
-
+        'users': user_list
     }
     return HttpResponse(template.render(context, request))
 
