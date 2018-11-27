@@ -1,4 +1,4 @@
-<h1>Welcome on the index page!</h1>
+<h1>Welcome on the index page {{ user.username }}!</h1>
 <p>We might not be skilled with CCS but we do make solid things. Or so we think.</p>
 <h2>Places you might want to visit : </h2>
 <h3>Notifications : 0</h3>
@@ -13,3 +13,14 @@
         <a>Forum</a>
     </li>
 </ul>
+
+<div>
+    {% if user.is_authenticated %}
+        <h2> You logged in successfully!</h2>
+        <a href="user/logout/">logout</a>
+    {% else %}
+        <h2>Do you want to login, or register?</h2>
+        <a href="user/login/">login</a>
+        <a href="user/register/">Register</a>
+    {% endif %}
+</div>
