@@ -10,11 +10,11 @@
     {% if error_message %}
         <p><strong>{{ error_message }}</strong></p>
     {% endif %}
-    <form action="{% url 'user:register' %}" method="POST">
-
+    <form action="/user/register/" method="POST">
+        {% csrf_token %}
+        {%  include 'user/form-template.html' %}
         <input type="submit" value="Register">
     </form>
-    {% csrf_token %}
 
 </div>
 </body>

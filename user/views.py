@@ -5,7 +5,6 @@ from django.template import loader
 from django.views.generic import View
 from .forms import UserForm
 
-
 # Create your views here.
 def index(request):
     template = loader.get_template('user/index.html')
@@ -17,7 +16,7 @@ def index(request):
 
 class UserFormView(View):
     form_class = UserForm
-    template_name = 'user/registration_form.html'
+    template_name = 'user/user_form.html'
 
     def get(self, request):
         form = self.form_class(None)
