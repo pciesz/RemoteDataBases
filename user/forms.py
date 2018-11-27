@@ -10,8 +10,9 @@ class UserForm(forms.ModelForm):
         fields = ['username', 'email', 'password']
 
 
-class UserLoginForm(object):
-    password = forms.CharField(widget=forms.PasswordInput)
+class UserLoginForm(forms.Form):
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder' : 'Username'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
 
     class Meta:
         model = User

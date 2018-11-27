@@ -68,13 +68,10 @@ class UserLoginFormView(View):
         form = self.form_class(request.POST)
 
         if form.is_valid():
-            user = form.save(commit=False)
-
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            user.set_password(password)
 
-            user.save()
+            print(username + ' ' + password)
 
             user = authenticate(username=username, password=password)
 
@@ -82,3 +79,7 @@ class UserLoginFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('/')
+
+        else:
+            print(form.errors)
+            return HttpResponse(str(form.errors))
