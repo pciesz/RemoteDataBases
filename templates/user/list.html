@@ -2,7 +2,19 @@
     <h1>Nothing worth seeing here {{ user.username }}!</h1>
 {% else %}
     <h1>Administration view:</h1>
-    {% for user in users %}
-
-    {% endfor %}
+    <table>
+            <tr>
+                <th>Username</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>E-mail</th>
+            </tr>
+        {% for user in users %}
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        {% endfor %}
+    </table>
 {% endif %}
