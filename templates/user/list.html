@@ -1,0 +1,8 @@
+{% if user.username != "admin" %}
+    <h1>Nothing worth seeing here {{ user.username }}!</h1>
+{% else %}
+    <h1>Administration view:</h1>
+    {% for user in users %}
+
+    {% endfor %}
+{% endif %}
