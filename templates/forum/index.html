@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Forum - categories</title>
+</head>
+<body>
+<h1>Forum</h1>
+<h1>Categories list:</h1>
+
+{% for category in categories %}
+    <ul>
+        <li><a href="category/{{ category.id }}">{{ category.name }}</a></li>
+    </ul>
+{% endfor %}
+</body>
+
+</html>

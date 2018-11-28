@@ -22,4 +22,5 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r"user/", include("user.urls"), name="user"),
     path(r"invoices/", include("invoice.urls"), name="invoices"),
+    path(r"forum/", include("forum.urls"), name="forum"),
 ]

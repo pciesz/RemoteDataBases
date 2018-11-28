@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Forum</title>
+</head>
+<body>
+<h1>Threads list:</h1>
+
+{% for thread in threads %}
+    <ul>
+        <li><a href="../../thread/{{ thread.id }}">{{ thread.subject }}</a></li>
+    </ul>
+{% endfor %}
+</body>
+
+</html>
