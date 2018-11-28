@@ -10,7 +10,7 @@ from django.template import loader
 from django.views import View
 
 import user
-from forum.forms import EntryForm
+from forum.forms import EntryForm, ThreadForm
 from forum.models import Thread, Category, Entry
 
 
@@ -58,9 +58,6 @@ class EntryFormView(View):
             'form': form
         }
 
-        print("size")
-        print(len(entry_context['posts']))
-
         return render(request=request, template_name=self.template_name, context=entry_context)
 
     def post(self, request, id):
@@ -86,5 +83,54 @@ class EntryFormView(View):
 
                     post.save()
 
-                    print(post.content)
                     return render(request=request, template_name=self.template_name, context=entry_context)
+
+
+class ThreadFormView(View):
+    form_class = ThreadForm
+    template_name = 'forum/category.html'
+    pid = 0
+
+    def get(self, request, id):
+        form = self.form_class(None)
+
+        context = {
+            'category': Category.objects.get(pk=id),
+            'threads': Thread.objects.filter(category=id),
+            'form': form
+        }
+
+        print('ssss')
+        print(context['category'].id)
+
+        return render(request=request, template_name=self.template_name, context=context)
+
+    def post(self, request, id):
+        form = self.form_class(request.POST)
+        active_user = request.user
+
+        context = {
+            'category': self.pid,
+            'threads': Thread.objects.filter(category=id),
+            'form': form
+        }
+
+        print('kek')
+        print(self.pid)
+
+        if active_user is not None:
+            if active_user.is_active:
+                if form.is_valid():
+                    thread = form.save(commit=False)
+
+                    print(self.pid)
+
+                    thread.subject = form.cleaned_data['subject']
+                    thread.category = Category.objects.get(pk=id)
+                    thread.lastModificationDate = datetime.datetime.now()
+
+                    thread.save()
+
+                    return render(request=request, template_name=self.template_name, context=context)
+
+        redirect('/')

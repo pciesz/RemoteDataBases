@@ -5,6 +5,15 @@
 <body>
 <h1>Threads list:</h1>
 
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form action="/forum/category/{{ category.id }}/" method="POST">
+    {% csrf_token %}
+    {% include 'forum/forms/view.html' %}
+    <input type="submit" value="Add thread!">
+</form>
+
 {% for thread in threads %}
     <ul>
         <li><a href="../../thread/{{ thread.id }}">{{ thread.subject }}</a></li>
