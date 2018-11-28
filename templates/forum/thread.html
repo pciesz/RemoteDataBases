@@ -16,7 +16,7 @@
 {% endif %}
 <form action="/forum/thread/{{ thread.id }}/" method="POST">
     {% csrf_token %}
-    {% include 'forum/forms/entry_view.html' %}
+    {% include 'forum/forms/view.html' %}
     <input type="submit" value="Post">
 </form>
 </body>
