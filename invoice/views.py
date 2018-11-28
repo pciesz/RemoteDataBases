@@ -14,7 +14,7 @@ def index(request):
     template = loader.get_template('invoice/index.html')
 
     context = {
-        'invoices': Invoice.objects.all()
+        'invoices': Invoice.objects.filter()
     }
 
     return HttpResponse(template.render(context, request))
