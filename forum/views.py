@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render, redirect
 
 from django.contrib.auth.models import User
@@ -74,7 +76,15 @@ class EntryFormView(View):
         if active_user is not None:
             if active_user.is_active:
                 if form.is_valid():
-                    content = form.cleaned_data['content']
+                    post = form.save(commit=False)
 
-                    print(content)
+                    post.user = active_user
+                    post.content = form.cleaned_data['content']
+                    post.thread = Thread.objects.get(pk=id)
+                    post.date = datetime.datetime.now()
+                    post.deleted = False
+
+                    post.save()
+
+                    print(post.content)
                     return render(request=request, template_name=self.template_name, context=entry_context)

@@ -3,7 +3,7 @@ from django import forms
 from forum.models import Entry, Thread, Category
 
 
-class EntryForm(forms.Form):
+class EntryForm(forms.ModelForm):
     content = forms.CharField(max_length=500)
 
     class Meta:
@@ -11,7 +11,7 @@ class EntryForm(forms.Form):
         fields = ['content']
 
 
-class ThreadForm(forms.Form):
+class ThreadForm(forms.ModelForm):
     subject = forms.CharField(max_length=120)
 
     class Meta:
@@ -19,7 +19,7 @@ class ThreadForm(forms.Form):
         fields = ['subject']
 
 
-class CategoryForm(forms.Form):
+class CategoryForm(forms.ModelForm):
     name = forms.CharField(max_length=120)
 
     class Meta:
