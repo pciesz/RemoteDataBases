@@ -13,7 +13,7 @@ from .forms import UserForm, UserLoginForm
 def index(request):
     template = loader.get_template('user/index.html')
     context = {
-        'notif': Notification.objects.get()
+        'notif': Notification.objects.all()
     }
     return HttpResponse(template.render(context, request))
 
