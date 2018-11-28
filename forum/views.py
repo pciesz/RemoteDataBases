@@ -7,6 +7,7 @@ from django.template import loader
 # Create your views here.
 from forum.models import Thread, Category, Entry
 
+
 def index(request):
     template = loader.get_template('forum/index.html')
 
@@ -16,11 +17,12 @@ def index(request):
 
     return HttpResponse(template.render(context, request))
 
+
 def category_view(request, id):
     template = loader.get_template('forum/category.html')
 
     context = {
-        'threads': Thread.objects.filter(category=id)#.order_by(lastModificationDate)
+        'threads': Thread.objects.filter(category=id)  # .order_by(lastModificationDate)
     }
 
     return HttpResponse(template.render(context, request))
