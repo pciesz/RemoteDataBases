@@ -3,13 +3,22 @@
     <title>Forum</title>
 </head>
 <body>
-<h1>{{ thread.subject}}</h1>
+<h1>{{ thread.subject }}</h1>
 
 {% for post in posts %}
     <p><b>{{ post.user }}, {{ post.date }}</b></p>
     <p>{{ post.content }}</p>
     <br/>
 {% endfor %}
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form action="/forum/thread/{{ thread.id }}/" method="POST">
+    {% csrf_token %}
+    {% include 'forum/forms/entry_view.html' %}
+    <input type="submit" value="Post">
+</form>
 </body>
 
 </html>

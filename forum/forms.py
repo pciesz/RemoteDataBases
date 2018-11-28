@@ -4,7 +4,7 @@ from forum.models import Entry, Thread, Category
 
 
 class EntryForm(forms.Form):
-    content = forms.TextInput()
+    content = forms.CharField(max_length=500)
 
     class Meta:
         model = Entry
