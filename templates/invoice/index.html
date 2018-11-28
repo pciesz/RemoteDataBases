@@ -1,5 +1,13 @@
 <h1>Here are invoices connected to your profile : </h1>
 <body>
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form action="/invoices/" method="POST">
+    {% csrf_token %}
+    {% include 'invoice/form/view.html' %}
+    <input type="submit" value="Add invoice!">
+</form>
 <table>
 
     <tr>
@@ -8,6 +16,7 @@
         <th>date</th>
         <th>Invoice path</th>
     </tr>
+
     {% for invoice in invoices %}
         <tr>
             <th>{{ invoice.issuingUser }}</th>
@@ -17,4 +26,5 @@
         </tr>
     {% endfor %}
 </table>
+<a href="/">back</a>
 </body>
