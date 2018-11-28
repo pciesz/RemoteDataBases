@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.template import loader
 from django.views.generic import View
+
+from notification.models import Notification
 from .forms import UserForm, UserLoginForm
 
 
@@ -11,7 +13,7 @@ from .forms import UserForm, UserLoginForm
 def index(request):
     template = loader.get_template('user/index.html')
     context = {
-
+        'notif': Notification.objects.get()
     }
     return HttpResponse(template.render(context, request))
 
