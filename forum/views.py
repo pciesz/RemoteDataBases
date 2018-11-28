@@ -10,7 +10,7 @@ from django.template import loader
 from django.views import View
 
 import user
-from forum.forms import EntryForm, ThreadForm
+from forum.forms import EntryForm, ThreadForm, CategoryForm
 from forum.models import Thread, Category, Entry
 
 
@@ -100,9 +100,6 @@ class ThreadFormView(View):
             'form': form
         }
 
-        print('ssss')
-        print(context['category'].id)
-
         return render(request=request, template_name=self.template_name, context=context)
 
     def post(self, request, id):
@@ -115,21 +112,55 @@ class ThreadFormView(View):
             'form': form
         }
 
-        print('kek')
-        print(self.pid)
-
         if active_user is not None:
             if active_user.is_active:
                 if form.is_valid():
                     thread = form.save(commit=False)
-
-                    print(self.pid)
 
                     thread.subject = form.cleaned_data['subject']
                     thread.category = Category.objects.get(pk=id)
                     thread.lastModificationDate = datetime.datetime.now()
 
                     thread.save()
+
+                    return render(request=request, template_name=self.template_name, context=context)
+
+        redirect('/')
+
+
+class CategoryFormView(View):
+    form_class = CategoryForm
+    template_name = 'forum/index.html'
+    pid = 0
+
+    def get(self, request):
+        form = self.form_class(None)
+
+        context = {
+            'categories': Category.objects.all(),
+            'form': form
+        }
+
+        return render(request=request, template_name=self.template_name, context=context)
+
+    def post(self, request):
+        form = self.form_class(request.POST)
+        active_user = request.user
+
+        context = {
+            'categories': Category.objects.all(),
+            'form': form
+        }
+
+        if active_user is not None:
+            if active_user.is_active:
+                if form.is_valid():
+                    category = form.save(commit=False)
+
+                    category.name = form.cleaned_data['name']
+                    category.visibleForConsumer = True
+
+                    category.save()
 
                     return render(request=request, template_name=self.template_name, context=context)
 
