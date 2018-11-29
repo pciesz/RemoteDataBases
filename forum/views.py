@@ -12,6 +12,7 @@ from django.views import View
 import user
 from forum.forms import EntryForm, ThreadForm, CategoryForm
 from forum.models import Thread, Category, Entry
+from notification.models import Notification
 
 
 def index(request):
@@ -82,6 +83,8 @@ class EntryFormView(View):
                     post.deleted = False
 
                     post.save()
+                    m = "New post in " + post.thread.subject
+                    Notification.objects.create(target_user=active_user, message=m)
 
                     return render(request=request, template_name=self.template_name, context=entry_context)
 

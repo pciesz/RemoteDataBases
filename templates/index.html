@@ -1,7 +1,6 @@
 <h1>Welcome on the index page {{ user.username }}!</h1>
-<p>We might not be skilled with CCS but we do make solid things. Or so we think.</p>
+<p>We might not be skilled with CSS but we do make solid things. Or so we think.</p>
 <h2>Places you might want to visit : </h2>
-<h3>Notifications : {{ notif | length }}</h3>
 <ul>
     <li>
         <a href="user/">User</a>
@@ -13,7 +12,12 @@
         <a href="forum/">Forum</a>
     </li>
 </ul>
-
+<h3>Notifications : {{ notif | length }}</h3>
+{% for n in notif %}
+    <ul>
+        <li> {{ n.message }}  <a href="notification/read/{{ n.id }}">Ok</a> </li>
+    </ul>
+{% endfor %}
 <div>
     {% if user.is_authenticated %}
         <h2> You logged in successfully!</h2>
