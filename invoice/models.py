@@ -18,4 +18,3 @@ class Invoice(models.Model):
     date = models.DateField()
     invoicePath = models.CharField(max_length=500)
 
-    visitation = models.ForeignKey(Visitation, on_delete=models.DO_NOTHING)
