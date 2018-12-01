@@ -3,13 +3,15 @@
 <div>
     {% if user.is_authenticated %}
         <h2> You logged in successfully!</h2>
-        <h2>Places you might want to visit : </h2>
         <h3>Notifications : {{ notif | length }}</h3>
         {% for n in notif %}
             <ul>
                 <li> {{ n.message }} <a href="/notification/read/{{ n.id }}">Ok</a></li>
             </ul>
         {% endfor %}
+        <h2>Places you might want to visit : </h2>
+
+        <br>
         <ul>
             <li>
                 <a href="/user/">User</a>

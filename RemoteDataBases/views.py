@@ -11,8 +11,8 @@ def index(request):
     template = loader.get_template('index.html')
 
     if request.user.is_active:
-        context = {
-            'notif': Notification.objects.filter(target_user=request.user, is_seen=False)
-        }
+        context = {'notif': Notification.objects.filter(target_user=request.user, is_seen=False)}
+    else:
+        context = {'notif': Notification.objects.none()}
 
     return HttpResponse(template.render(context, request))

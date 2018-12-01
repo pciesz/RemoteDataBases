@@ -3,18 +3,26 @@
 {% if error_message %}
     <p><strong>{{ error_message }}</strong></p>
 {% endif %}
-<form action="/invoices/" method="POST">
+<form action="/invoices/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {% include 'invoice/form/view.html' %}
+    <br>
     <input type="submit" value="Add invoice!">
 </form>
-<table>
+<style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+<table style="width:100%">
 
     <tr>
         <th>Issuer</th>
         <th>Receiver</th>
-        <th>date</th>
-        <th>Invoice path</th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Invoice</th>
     </tr>
 
     {% for invoice in invoices %}
@@ -22,7 +30,8 @@
             <th>{{ invoice.issuingUser }}</th>
             <th>{{ invoice.receivingUser }}</th>
             <th>{{ invoice.date }}</th>
-            <th>{{ invoice.invoicePath }}</th>
+            <th>{{ invoice.invoice.name }}</th>
+            <th><a href="{{ invoice.invoice.url }}">Preview</a></th>
         </tr>
     {% endfor %}
 </table>

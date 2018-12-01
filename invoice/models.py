@@ -16,5 +16,5 @@ class Invoice(models.Model):
     receivingUser = models.ForeignKey(User, related_name="receiver", on_delete=models.DO_NOTHING)
 
     date = models.DateField()
-    invoicePath = models.CharField(max_length=500)
+    invoice = models.FileField()
 

@@ -1,6 +1,7 @@
 import datetime
 from itertools import chain
 
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -49,8 +50,10 @@ class InvoiceFormView(View):
 
                 return render(request=request, template_name=self.template_name, context=context)
 
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
+
     def post(self, request):
-        form = self.form_class(request.POST)
+        form = self.form_class(request.POST, request.FILES)
         active_user = request.user
 
         if active_user is not None:
@@ -61,12 +64,12 @@ class InvoiceFormView(View):
                     invoice.issuingUser = form.cleaned_data['issuingUser']
                     invoice.receivingUser = form.cleaned_data['receivingUser']
                     invoice.date = datetime.datetime.now()
-                    invoice.invoicePath = form.cleaned_data['invoicePath']
+                    invoice.invoice = form.cleaned_data['invoice']
 
                     if invoice.issuingUser is None:
-                        redirect('/')
+                        return HttpResponse("<h1>UNAUTHORIZED</h1>")
                     if invoice.receivingUser is None:
-                        redirect('/')
+                        return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
                     invoice.save()
 
@@ -81,5 +84,8 @@ class InvoiceFormView(View):
                     }
 
                     return render(request=request, template_name=self.template_name, context=context)
+                elif settings.DEBUG:
+                    print(form.errors)
+                    return HttpResponse("<h1>NOT form.is_valid()</h1>")
 
-        redirect('/')
+        return redirect('/')

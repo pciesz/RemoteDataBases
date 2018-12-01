@@ -24,7 +24,13 @@ def List(request):
     context = {
         'users': user_list
     }
-    return HttpResponse(template.render(context, request))
+
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
+
+
 
 
 class UserFormView(View):
@@ -85,5 +91,4 @@ class UserLoginFormView(View):
                     return redirect('/')
 
         else:
-            print(form.errors)
             return HttpResponse(str(form.errors))
