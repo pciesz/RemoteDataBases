@@ -23,4 +23,5 @@ urlpatterns = [
     path(r"user/", include("user.urls"), name="user"),
     path(r"invoices/", include("invoice.urls"), name="invoices"),
     path(r"forum/", include("forum.urls"), name="forum"),
+    path(r"notification/", include("notification.urls"), name="notifications"),
 ]

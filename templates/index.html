@@ -1,27 +1,30 @@
 <h1>Welcome on the index page {{ user.username }}!</h1>
 <p>We might not be skilled with CCS but we do make solid things. Or so we think.</p>
-
-
 <div>
     {% if user.is_authenticated %}
         <h2> You logged in successfully!</h2>
         <h2>Places you might want to visit : </h2>
         <h3>Notifications : {{ notif | length }}</h3>
+        {% for n in notif %}
+            <ul>
+                <li> {{ n.message }} <a href="/notification/read/{{ n.id }}">Ok</a></li>
+            </ul>
+        {% endfor %}
         <ul>
             <li>
-                <a href="user/">User</a>
+                <a href="/user/">User</a>
             </li>
             <li>
-                <a href="invoices/">Invoices</a>
+                <a href="/invoices/">Invoices</a>
             </li>
             <li>
-                <a href="forum/">Forum</a>
+                <a href="/forum/">Forum</a>
             </li>
         </ul>
-        <a href="user/logout/">logout</a>
+        <a href="/user/logout/">logout</a>
     {% else %}
         <h2>Do you want to login or register?</h2>
-        <a href="user/login/">Login</a>
-        <a href="user/register/">Register</a>
+        <a href="/user/login/">Login</a>
+        <a href="/user/register/">Register</a>
     {% endif %}
 </div>
