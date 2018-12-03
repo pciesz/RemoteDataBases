@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.2)  3 DEC 2018 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.2)  3 DEC 2018 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,15 +949,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
  (./sprawozdanie.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package rerunfilecheck Info: File `sprawozdanie.out' has not changed.
+(rerunfilecheck)             Checksum: F217EE45CD8CF040304D8ADD3D20F9AB;2065.
 
-
-Package rerunfilecheck Warning: File `sprawozdanie.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `sprawozdanie.out':
-(rerunfilecheck)             Before: F81D957BC1EDF1BA5FE595B2E0DBD7A9;2066
-(rerunfilecheck)             After:  F217EE45CD8CF040304D8ADD3D20F9AB;2065.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -978,7 +972,7 @@ e1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/pl
 r12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/pl/pltt12.pfb>
-Output written on sprawozdanie.pdf (25 pages, 816126 bytes).
+Output written on sprawozdanie.pdf (25 pages, 816110 bytes).
 PDF statistics:
  393 PDF objects out of 1000 (max. 8388607)
  319 compressed objects within 4 object streams

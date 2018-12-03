@@ -39,7 +39,7 @@ class InvoiceFormView(View):
 
         if request.user is not None:
             if request.user.is_active:
-                result_list = Invoice.objects.filter(issuingUser=request.user, receivingUser=request.user)
+                result_list = Invoice.objects.filter(receivingUser=request.user)
 
                 context = {
                     'invoices': result_list,
