@@ -304,7 +304,7 @@ Należy wypełnić pola, aby dodać fakturę. Po dodaniu faktury automatycznie t
 	\includegraphics[scale=0.3]{img/8.png}
 	\caption{Dodana faktura}
 \end{figure}
-\subsection{Porzeglądanie forum}
+\subsection{Przeglądanie forum}
 Po wybraniu 'Forum' ze strony głównej, możemy przeglądać kategorie, oraz dodawać nowe:
 \begin{figure}[H]
 	\centering
@@ -340,7 +340,7 @@ Dodanie postu generuje notyfikację:
 
 \section{Opis aplikacji od strony programistycznej}
 \subsection{Architektura aplikacji}
-W celu utrzymania prostoty projektu, użyto standardowego dla Django wzorca model-template-view, który jest pokrewny z MVC. Dzięki temu mamy wydzieloną część bazodanową, urktyą za modelem, szablony poszczególnych podstron oraz obsługę widoków. Każdy z tych elementów zostanie przedstawiony poniżej.
+W celu utrzymania prostoty projektu, użyto standardowego dla Django wzorca model-template-view, który jest pokrewny z MVC. Dzięki temu mamy wydzieloną część bazodanową, ukrytą za modelem, szablony poszczególnych podstron oraz obsługę widoków. Każdy z tych elementów zostanie przedstawiony poniżej.
 
 \subsection{Bezpieczeństwo}
 Podstrony z ograniczonym dostępem dla danych użytkowników są dodatkowo sprawdzane podczas wczytywania (pierwsza linia):
@@ -349,7 +349,7 @@ Podstrony z ograniczonym dostępem dla danych użytkowników są dodatkowo spraw
 	\includegraphics[scale=0.7]{img/c_template_security.png}
 	\caption{Zabezpieczenie szablonu przed niepoprawnym wyświetleniem}
 \end{figure}
-Oprócz tego wsrożono podstawową autryzację uniemożliwiającą dostęp do stron bez zalogowania.
+Oprócz tego wdrożono podstawową autoryzację uniemożliwiającą dostęp do stron bez zalogowania.
 
 \subsection{Diagram związków encji}
 Został on przedstawiony w notacji Martina (kruczej stopki)
@@ -441,12 +441,13 @@ Dla bezpeczeństwa konieczna jest zmiana kluczy i wyłączenie trybu debugowania
 \end{figure}
 
 \section{Podsumowanie}
-Dzięki dokładnej analizie potrzeb klienta otrzymaliśmy kompletny zestaw wymagań, które powinny być spełnione. Umożliwiło to lepsze zaprojektowanie modularnego systemu, który można w prosty sposób zmieniać, gdy ge wymagania ulegną modyfikacji. Następnie zaimplementowaliśmy niezbędne funkcjonalności oraz przerpowadziliśmy wdrożenie aplikacji.
+Dzięki dokładnej analizie potrzeb klienta otrzymaliśmy kompletny zestaw wymagań, które powinny być spełnione. Umożliwiło to lepsze zaprojektowanie modularnego systemu, który można w prosty sposób zmieniać, gdy te wymagania ulegną modyfikacji. Następnie zaimplementowaliśmy niezbędne funkcjonalności oraz przeprowadziliśmy wdrożenie aplikacji.
 
-Finalnie, system wspiera firmę w przekazywaniu faktur klientom. Do informowania klienta jest wykorzystywany także system powiadomień. Przekazuje on także informacje o nowych postach na forum, które jest ostatnią funkcjonalnością, jaka została wdrożona. Całość ma za zadanie usprawnić komunikację między firmą kupującą nasze rozwiązanie, a jej klientami.
+Finalnie, system wspiera firmę w przekazywaniu faktur klientom. Do informowania klienta jest wykorzystywany także system powiadomień. Przekazuje on informacje o nowych postach na forum, które jest ostatnią funkcjonalnością, jaka została wdrożona. Całość ma za zadanie usprawnić komunikację między firmą kupującą nasze rozwiązanie, a jej klientami.
 
 \section{Literatura}
 \begin{itemize}
+	\item Wykład z Internetowych Baz Danych: \url{http://roman.ptak.staff.iiar.pwr.wroc.pl/}
 	\item Dokumentacja Pythona 3.6: \url{https://docs.python.org/3.6/}
 	\item Dokumentacja Django 2.1.2: \url{https://docs.djangoproject.com/en/2.1/contents/}
 	\item Dokumentacja HTML4: \url{https://www.w3.org/TR/html4/cover.html}
