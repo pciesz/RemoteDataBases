@@ -1,0 +1,30 @@
+\BOOKMARK [1][-]{section.1}{Za\233ozenia projektowe}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Przypadki uzycia}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Bezpieczenstwo}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Przewidywane technologie}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Analiza SWOT}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Analiza powiazan SWOT}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Techniczna wykonalnosc projektu}{}% 7
+\BOOKMARK [1][-]{section.4}{Kosztorys}{}% 8
+\BOOKMARK [1][-]{section.5}{Instrukcja dla uzytkownika}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Rejestracja w systemie}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Logowanie do systemu}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{Wylogowanie z systemu}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.4}{Sprawdzenie informacji o sobie}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.5}{Odczytywanie notyfikacji}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.6}{Sprawdzenie listy wszystkich uzytkownik\363w systemu \(tylko dla administratora\)}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.7}{Sprawdzenie listy faktur i pobranie interesujacych}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.8}{Wystawienie nowych faktur \(dla pracownika\)}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.9}{Porzegladanie forum}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.10}{Dodawanie nowych watk\363w i post\363w}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Opis aplikacji od strony programistycznej}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{Architektura aplikacji}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.2}{Bezpieczenstwo}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.3}{Diagram zwiazk\363w encji}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.4}{Mapowanie ORM}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.5}{Widoki}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.6}{Szablony}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.7}{Urls}{section.6}% 27
+\BOOKMARK [1][-]{section.7}{Instrukcja wdrozenia}{}% 28
+\BOOKMARK [1][-]{section.8}{Podsumowanie}{}% 29
+\BOOKMARK [1][-]{section.9}{Literatura}{}% 30
