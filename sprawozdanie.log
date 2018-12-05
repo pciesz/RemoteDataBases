@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.2)  3 DEC 2018 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.2)  5 DEC 2018 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,24 +717,24 @@ LaTeX Font Info:    External font `plex10' loaded for size
 \openout4 = `sprawozdanie.toc'.
 
  [2]
-<img/use_cases.png, id=168, 826.08624pt x 962.59625pt>
-File: img/use_cases.png Graphic file (type png)
-<use img/use_cases.png>
-Package pdftex.def Info: img/use_cases.png  used on input line 123.
-(pdftex.def)             Requested size: 495.65556pt x 577.56221pt.
+<img/przejscia.png, id=168, 897.3525pt x 1037.8775pt>
+File: img/przejscia.png Graphic file (type png)
+<use img/przejscia.png>
+Package pdftex.def Info: img/przejscia.png  used on input line 117.
+(pdftex.def)             Requested size: 493.5454pt x 570.8344pt.
 
-Overfull \hbox (25.90054pt too wide) in paragraph at lines 123--124
+Overfull \hbox (23.79037pt too wide) in paragraph at lines 117--118
  [][] 
  []
 
-[3] [4 <./img/use_cases.png>]
+[3] [4 <./img/przejscia.png>]
 <img/swot1.png, id=180, 476.53032pt x 414.04688pt>
 File: img/swot1.png Graphic file (type png)
 <use img/swot1.png>
-Package pdftex.def Info: img/swot1.png  used on input line 148.
+Package pdftex.def Info: img/swot1.png  used on input line 142.
 (pdftex.def)             Requested size: 476.52916pt x 414.04585pt.
 
-Overfull \hbox (6.77414pt too wide) in paragraph at lines 148--149
+Overfull \hbox (6.77414pt too wide) in paragraph at lines 142--143
  [][] 
  []
 
@@ -742,229 +742,231 @@ Overfull \hbox (6.77414pt too wide) in paragraph at lines 148--149
 <img/swot2.png, id=186, 450.18187pt x 222.8325pt>
 File: img/swot2.png Graphic file (type png)
 <use img/swot2.png>
-Package pdftex.def Info: img/swot2.png  used on input line 154.
+Package pdftex.def Info: img/swot2.png  used on input line 148.
 (pdftex.def)             Requested size: 450.18077pt x 222.83195pt.
 <img/swot3.png, id=187, 395.97937pt x 223.58531pt>
 File: img/swot3.png Graphic file (type png)
 <use img/swot3.png>
-Package pdftex.def Info: img/swot3.png  used on input line 159.
+Package pdftex.def Info: img/swot3.png  used on input line 153.
 (pdftex.def)             Requested size: 435.57866pt x 245.94458pt.
  [6 <./img/swot1.png>]
 <img/swot4.png, id=194, 377.91188pt x 173.89969pt>
 File: img/swot4.png Graphic file (type png)
 <use img/swot4.png>
-Package pdftex.def Info: img/swot4.png  used on input line 164.
+Package pdftex.def Info: img/swot4.png  used on input line 158.
 (pdftex.def)             Requested size: 415.70435pt x 191.29022pt.
 <img/swot5.png, id=195, 392.96812pt x 173.14688pt>
 File: img/swot5.png Graphic file (type png)
 <use img/swot5.png>
-Package pdftex.def Info: img/swot5.png  used on input line 169.
+Package pdftex.def Info: img/swot5.png  used on input line 163.
 (pdftex.def)             Requested size: 432.26625pt x 190.46214pt.
  [7 <./img/swot2.png> <./img/swot3.png>] [8 <./img/swot4.png> <./img/swot5.png>
 ] [9]
-<img/1.png, id=217, 643.40375pt x 242.9075pt>
+<img/1.png, id=217, 776.9025pt x 177.66376pt>
 File: img/1.png Graphic file (type png)
 <use img/1.png>
-Package pdftex.def Info: img/1.png  used on input line 221.
-(pdftex.def)             Requested size: 321.70108pt x 121.45345pt.
-<img/2.png, id=218, 355.3275pt x 298.11375pt>
+Package pdftex.def Info: img/1.png  used on input line 215.
+(pdftex.def)             Requested size: 388.45029pt x 88.83165pt.
+<img/2.png, id=218, 350.30875pt x 367.3725pt>
 File: img/2.png Graphic file (type png)
 <use img/2.png>
-Package pdftex.def Info: img/2.png  used on input line 227.
-(pdftex.def)             Requested size: 177.6633pt x 149.0565pt.
-<img/3.png, id=219, 658.46pt x 381.425pt>
+Package pdftex.def Info: img/2.png  used on input line 221.
+(pdftex.def)             Requested size: 175.15395pt x 183.68579pt.
+<img/3.png, id=219, 444.66125pt x 324.21124pt>
 File: img/3.png Graphic file (type png)
 <use img/3.png>
-Package pdftex.def Info: img/3.png  used on input line 233.
-(pdftex.def)             Requested size: 329.2292pt x 190.71202pt.
+Package pdftex.def Info: img/3.png  used on input line 227.
+(pdftex.def)             Requested size: 222.33008pt x 162.10522pt.
  [10 <./img/1.png> <./img/2.png>]
 File: img/1.png Graphic file (type png)
 <use img/1.png>
-Package pdftex.def Info: img/1.png  used on input line 241.
-(pdftex.def)             Requested size: 321.70108pt x 121.45345pt.
+Package pdftex.def Info: img/1.png  used on input line 235.
+(pdftex.def)             Requested size: 388.45029pt x 88.83165pt.
 <img/4.png, id=226, 351.3125pt x 198.7425pt>
 File: img/4.png Graphic file (type png)
 <use img/4.png>
-Package pdftex.def Info: img/4.png  used on input line 247.
+Package pdftex.def Info: img/4.png  used on input line 241.
 (pdftex.def)             Requested size: 175.6558pt x 99.371pt.
 File: img/3.png Graphic file (type png)
 <use img/3.png>
-Package pdftex.def Info: img/3.png  used on input line 255.
-(pdftex.def)             Requested size: 329.2292pt x 190.71202pt.
+Package pdftex.def Info: img/3.png  used on input line 249.
+(pdftex.def)             Requested size: 222.33008pt x 162.10522pt.
  [11 <./img/3.png> <./img/4.png>]
 <img/5.png, id=234, 311.1625pt x 212.795pt>
 File: img/5.png Graphic file (type png)
 <use img/5.png>
-Package pdftex.def Info: img/5.png  used on input line 262.
+Package pdftex.def Info: img/5.png  used on input line 256.
 (pdftex.def)             Requested size: 217.81226pt x 148.95547pt.
 <img/9.png, id=235, 417.56pt x 94.3525pt>
 File: img/9.png Graphic file (type png)
 <use img/9.png>
-Package pdftex.def Info: img/9.png  used on input line 269.
+Package pdftex.def Info: img/9.png  used on input line 263.
 (pdftex.def)             Requested size: 292.29pt x 66.04628pt.
- [12 <./img/5.png> <./img/9.png>]
-<img/16.png, id=243, 483.8075pt x 229.85875pt>
+<img/16.png, id=236, 483.8075pt x 229.85875pt>
 File: img/16.png Graphic file (type png)
 <use img/16.png>
-Package pdftex.def Info: img/16.png  used on input line 277.
+Package pdftex.def Info: img/16.png  used on input line 271.
 (pdftex.def)             Requested size: 338.66293pt x 160.90001pt.
+ [12 <./img/5.png> <./img/9.png>]
 <img/15.png, id=244, 337.26pt x 224.84pt>
 File: img/15.png Graphic file (type png)
 <use img/15.png>
-Package pdftex.def Info: img/15.png  used on input line 282.
+Package pdftex.def Info: img/15.png  used on input line 276.
 (pdftex.def)             Requested size: 236.08038pt x 157.38692pt.
 <img/8.png, id=245, 1685.29625pt x 189.70876pt>
 File: img/8.png Graphic file (type png)
 <use img/8.png>
-Package pdftex.def Info: img/8.png  used on input line 289.
+Package pdftex.def Info: img/8.png  used on input line 283.
 (pdftex.def)             Requested size: 505.59279pt x 56.91306pt.
 
-Overfull \hbox (35.83777pt too wide) in paragraph at lines 289--290
+Overfull \hbox (35.83777pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
-[13 <./img/16.png> <./img/15.png>]
-<img/7.png, id=253, 827.09pt x 199.74625pt>
+[13 <./img/16.png> <./img/15.png> <./img/8.png>]
+<img/7.png, id=254, 827.09pt x 199.74625pt>
 File: img/7.png Graphic file (type png)
 <use img/7.png>
-Package pdftex.def Info: img/7.png  used on input line 298.
+Package pdftex.def Info: img/7.png  used on input line 292.
 (pdftex.def)             Requested size: 413.54398pt x 99.87288pt.
 File: img/8.png Graphic file (type png)
 <use img/8.png>
-Package pdftex.def Info: img/8.png  used on input line 304.
+Package pdftex.def Info: img/8.png  used on input line 298.
 (pdftex.def)             Requested size: 505.59279pt x 56.91306pt.
 
-Overfull \hbox (35.83777pt too wide) in paragraph at lines 304--305
+Overfull \hbox (35.83777pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
-<img/10.png, id=254, 352.31625pt x 334.24875pt>
+<img/10.png, id=255, 352.31625pt x 334.24875pt>
 File: img/10.png Graphic file (type png)
 <use img/10.png>
-Package pdftex.def Info: img/10.png  used on input line 311.
+Package pdftex.def Info: img/10.png  used on input line 305.
 (pdftex.def)             Requested size: 246.61969pt x 233.97252pt.
-[14 <./img/8.png> <./img/7.png>]
+[14 <./img/7.png>]
 <img/11.png, id=262, 393.47pt x 281.05pt>
 File: img/11.png Graphic file (type png)
 <use img/11.png>
-Package pdftex.def Info: img/11.png  used on input line 317.
+Package pdftex.def Info: img/11.png  used on input line 311.
 (pdftex.def)             Requested size: 275.42711pt x 196.73364pt.
 File: img/11.png Graphic file (type png)
 <use img/11.png>
-Package pdftex.def Info: img/11.png  used on input line 324.
+Package pdftex.def Info: img/11.png  used on input line 318.
 (pdftex.def)             Requested size: 275.42711pt x 196.73364pt.
  [15 <./img/10.png> <./img/11.png>]
 <img/13.png, id=269, 829.0975pt x 383.4325pt>
 File: img/13.png Graphic file (type png)
 <use img/13.png>
-Package pdftex.def Info: img/13.png  used on input line 330.
+Package pdftex.def Info: img/13.png  used on input line 324.
 (pdftex.def)             Requested size: 414.54774pt x 191.71577pt.
 <img/14.png, id=270, 533.995pt x 169.63374pt>
 File: img/14.png Graphic file (type png)
 <use img/14.png>
-Package pdftex.def Info: img/14.png  used on input line 336.
+Package pdftex.def Info: img/14.png  used on input line 330.
 (pdftex.def)             Requested size: 373.79395pt x 118.7428pt.
  [16 <./img/13.png>]
 <img/c_template_security.png, id=277, 435.6275pt x 328.22626pt>
 File: img/c_template_security.png Graphic file (type png)
 <use img/c_template_security.png>
-Package pdftex.def Info: img/c_template_security.png  used on input line 349.
+Package pdftex.def Info: img/c_template_security.png  used on input line 342.
 (pdftex.def)             Requested size: 304.93716pt x 229.7568pt.
- [17 <./img/14.png> <./img/c_template_security.png>]
+
+[17 <./img/14.png> <./img/c_template_security.png>]
 <img/sqlite.png, id=284, 610.28pt x 642.4pt>
 File: img/sqlite.png Graphic file (type png)
 <use img/sqlite.png>
-Package pdftex.def Info: img/sqlite.png  used on input line 359.
+Package pdftex.def Info: img/sqlite.png  used on input line 352.
 (pdftex.def)             Requested size: 488.22466pt x 513.9207pt.
 
-Overfull \hbox (18.46964pt too wide) in paragraph at lines 359--360
+Overfull \hbox (18.46964pt too wide) in paragraph at lines 352--353
  [][] 
  []
 
 <img/c_forum_model.png, id=285, 620.3175pt x 383.4325pt>
 File: img/c_forum_model.png Graphic file (type png)
 <use img/c_forum_model.png>
-Package pdftex.def Info: img/c_forum_model.png  used on input line 368.
+Package pdftex.def Info: img/c_forum_model.png  used on input line 361.
 (pdftex.def)             Requested size: 434.2193pt x 268.40092pt.
-[18 <./img/sqlite.png>]
-<img/c_invoice_post.png, id=292, 729.72626pt x 603.25375pt>
+[18 <./img/sqlite.png>] [19 <./img/c_forum_model.png>]
+<img/c_invoice_post.png, id=299, 729.72626pt x 603.25375pt>
 File: img/c_invoice_post.png Graphic file (type png)
 <use img/c_invoice_post.png>
-Package pdftex.def Info: img/c_invoice_post.png  used on input line 376.
+Package pdftex.def Info: img/c_invoice_post.png  used on input line 369.
 (pdftex.def)             Requested size: 510.8049pt x 422.27475pt.
 
-Overfull \hbox (41.04988pt too wide) in paragraph at lines 376--377
+Overfull \hbox (41.04988pt too wide) in paragraph at lines 369--370
  [][] 
  []
 
-<img/c_notify_view.png, id=293, 633.36626pt x 189.70876pt>
+<img/c_notify_view.png, id=300, 633.36626pt x 189.70876pt>
 File: img/c_notify_view.png Graphic file (type png)
 <use img/c_notify_view.png>
-Package pdftex.def Info: img/c_notify_view.png  used on input line 381.
+Package pdftex.def Info: img/c_notify_view.png  used on input line 374.
 (pdftex.def)             Requested size: 443.35336pt x 132.79521pt.
-[19 <./img/c_forum_model.png>]
-<img/c_user_login.png, id=301, 527.9725pt x 426.59375pt>
+<img/c_user_login.png, id=301, 513.92pt x 466.74374pt>
 File: img/c_user_login.png Graphic file (type png)
 <use img/c_user_login.png>
-Package pdftex.def Info: img/c_user_login.png  used on input line 386.
-(pdftex.def)             Requested size: 369.57823pt x 298.61357pt.
- [20 <./img/c_invoice_post.png> <./img/c_notify_view.png>]
-<img/c_template.png, id=308, 643.40375pt x 490.83376pt>
+Package pdftex.def Info: img/c_user_login.png  used on input line 379.
+(pdftex.def)             Requested size: 359.74153pt x 326.71838pt.
+[20 <./img/c_invoice_post.png>] [21 <./img/c_notify_view.png> <./img/c_user_log
+in.png>]
+<img/c_template.png, id=313, 643.40375pt x 490.83376pt>
 File: img/c_template.png Graphic file (type png)
 <use img/c_template.png>
-Package pdftex.def Info: img/c_template.png  used on input line 393.
+Package pdftex.def Info: img/c_template.png  used on input line 387.
 (pdftex.def)             Requested size: 450.37955pt x 343.58128pt.
-<img/c_forum_template.png, id=309, 447.6725pt x 408.52625pt>
+<img/c_forum_template.png, id=314, 447.6725pt x 408.52625pt>
 File: img/c_forum_template.png Graphic file (type png)
 <use img/c_forum_template.png>
-Package pdftex.def Info: img/c_forum_template.png  used on input line 398.
+Package pdftex.def Info: img/c_forum_template.png  used on input line 392.
 (pdftex.def)             Requested size: 313.3686pt x 285.96642pt.
- [21 <./img/c_user_login.png>] [22 <./img/c_template.png>]
-<img/c_urls.png, id=320, 597.23125pt x 133.49875pt>
+ [22 <./img/c_template.png>] [23 <./img/c_forum_template.png>]
+<img/c_urls.png, id=325, 597.23125pt x 133.49875pt>
 File: img/c_urls.png Graphic file (type png)
 <use img/c_urls.png>
-Package pdftex.def Info: img/c_urls.png  used on input line 405.
+Package pdftex.def Info: img/c_urls.png  used on input line 400.
 (pdftex.def)             Requested size: 418.05902pt x 93.44847pt.
-<img/c_user_urls.png, id=321, 521.95pt x 138.5175pt>
+<img/c_user_urls.png, id=326, 521.95pt x 138.5175pt>
 File: img/c_user_urls.png Graphic file (type png)
 <use img/c_user_urls.png>
-Package pdftex.def Info: img/c_user_urls.png  used on input line 410.
+Package pdftex.def Info: img/c_user_urls.png  used on input line 405.
 (pdftex.def)             Requested size: 365.3625pt x 96.96158pt.
- [23 <./img/c_forum_template.png> <./img/c_urls.png>]
-<img/c_security.png, id=328, 487.8225pt x 140.525pt>
+ [24 <./img/c_urls.png> <./img/c_user_urls.png>]
+<img/c_security.png, id=333, 487.8225pt x 140.525pt>
 File: img/c_security.png Graphic file (type png)
 <use img/c_security.png>
-Package pdftex.def Info: img/c_security.png  used on input line 439.
+Package pdftex.def Info: img/c_security.png  used on input line 434.
 (pdftex.def)             Requested size: 341.47342pt x 98.3668pt.
- [24 <./img/c_user_urls.png>]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 450
+ [25 <./img/c_security.png>]
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 445
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
- [25 <./img/c_security.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
- (./sprawozdanie.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
+ [26]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
+
+(./sprawozdanie.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
 Package rerunfilecheck Info: File `sprawozdanie.out' has not changed.
 (rerunfilecheck)             Checksum: F217EE45CD8CF040304D8ADD3D20F9AB;2065.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
  ) 
 Here is how much of TeX's memory you used:
- 10262 strings out of 494549
- 152354 string characters out of 6176898
+ 10263 strings out of 494549
+ 152361 string characters out of 6176898
  444213 words of memory out of 5000000
  13644 multiletter control sequences out of 15000+600000
  11260 words of font info for 33 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 41i,8n,40p,394b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,40p,395b,385s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/pltt.enc} </home/tp/.texliv
 e2018/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk>{/usr/share/texlive/
 texmf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/share/texlive/texmf-dist/fonts/typ
@@ -972,10 +974,10 @@ e1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/pl
 r12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/pl/pltt12.pfb>
-Output written on sprawozdanie.pdf (25 pages, 816110 bytes).
+Output written on sprawozdanie.pdf (26 pages, 820185 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 319 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 397 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
  396 words of extra memory for PDF output out of 10000 (max. 10000000)
 

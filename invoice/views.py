@@ -44,7 +44,10 @@ class InvoiceFormView(View):
 
         if request.user is not None:
             if request.user.is_active:
-                result_list = Invoice.objects.filter(receivingUser=request.user)
+                if request.user.is_staff:
+                    result_list = Invoice.objects.all()
+                else:
+                    result_list = Invoice.objects.filter(receivingUser=request.user)
 
                 context = {
                     'invoices': result_list,
@@ -78,12 +81,13 @@ class InvoiceFormView(View):
 
                     invoice.save()
                     m = "New incoice!"
-                    Notification.objects.create(target_user=active_user, message=m)
+                    Notification.objects.create(target_user=invoice.receivingUser, message=m)
 
-                    wIssuer = Invoice.objects.filter(issuingUser=request.user)
-                    wReceiver = Invoice.objects.filter(receivingUser=request.user)
+                    # wIssuer = Invoice.objects.filter(issuingUser=request.user)
+                    # wReceiver = Invoice.objects.filter(receivingUser=request.user)
+                    result_list = Invoice.objects.all()
 
-                    result_list = list(chain(wIssuer, wReceiver))
+                    # result_list = list(chain(wIssuer, wReceiver))
 
                     context = {
                         'invoices': result_list,

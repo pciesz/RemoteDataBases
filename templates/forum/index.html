@@ -9,11 +9,13 @@
 {% if error_message %}
     <p><strong>{{ error_message }}</strong></p>
 {% endif %}
+{% if user.is_staff == True %}
 <form action="/forum/" method="POST">
     {% csrf_token %}
     {% include 'forum/forms/view.html' %}
     <input type="submit" value="Add category!">
 </form>
+{%  endif %}
 
 {% for category in categories %}
     <ul>

@@ -23,9 +23,9 @@
 \contentsline {subsection}{\numberline {6.2}Bezpiecze\IeC {\'n}stwo}{17}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Diagram zwi\IeC {\k a}zk\IeC {\'o}w encji}{18}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Mapowanie ORM}{19}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Widoki}{19}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Szablony}{21}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Urls}{23}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.5}Widoki}{20}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Szablony}{22}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Urls}{24}{subsection.6.7}
 \contentsline {section}{\numberline {7}Instrukcja wdro\IeC {\.z}enia}{24}{section.7}
-\contentsline {section}{\numberline {8}Podsumowanie}{25}{section.8}
-\contentsline {section}{\numberline {9}Literatura}{25}{section.9}
+\contentsline {section}{\numberline {8}Podsumowanie}{26}{section.8}
+\contentsline {section}{\numberline {9}Literatura}{26}{section.9}
