@@ -4,20 +4,26 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.template import loader
 from django.views.generic import View
+from django.views.decorators.cache import never_cache
 
 from notification.models import Notification
 from .forms import UserForm, UserLoginForm
 
 
-# Create your views here.
+@never_cache
 def index(request):
     template = loader.get_template('user/index.html')
     context = {
         'notif': Notification.objects.all()
     }
-    return HttpResponse(template.render(context, request))
 
 
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
+
+@never_cache
 def List(request):
     template = loader.get_template('user/list.html')
     user_list = User.objects.all()
@@ -31,16 +37,16 @@ def List(request):
         return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
 
-
-
 class UserFormView(View):
     form_class = UserForm
     template_name = 'user/user_form.html'
 
+    @never_cache
     def get(self, request):
         form = self.form_class(None)
         return render(request, self.template_name, {'form': form})
 
+    @never_cache
     def post(self, request):
         form = self.form_class(request.POST)
 
@@ -63,7 +69,7 @@ class UserFormView(View):
             #return render(request, 'user/user_exist.html')
             return HttpResponse("<h2>This user exist!</h2>")
 
-
+@never_cache
 def Logout(request):
     logout(request)
     return redirect('/')
@@ -73,10 +79,12 @@ class UserLoginFormView(View):
     form_class = UserLoginForm
     template_name = 'user/user_login_form.html'
 
+    @never_cache
     def get(self, request):
         form = self.form_class(None)
         return render(request, self.template_name, {'form': form})
 
+    @never_cache
     def post(self, request):
         form = self.form_class(request.POST)
 
@@ -92,6 +100,8 @@ class UserLoginFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('/')
+            else:
+                return HttpResponse("<h2>Bad login or password!</h2>")
 
         else:
             return HttpResponse(str(form.errors))

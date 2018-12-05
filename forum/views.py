@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.template import loader
+from django.views.decorators.cache import never_cache
 
 # Create your views here.
 from django.views import View
@@ -15,6 +16,7 @@ from forum.models import Thread, Category, Entry
 from notification.models import Notification
 
 
+@never_cache
 def index(request):
     template = loader.get_template('forum/index.html')
 
@@ -22,9 +24,13 @@ def index(request):
         'categories': Category.objects.all()
     }
 
-    return HttpResponse(template.render(context, request))
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
 
+@never_cache
 def category_view(request, id):
     template = loader.get_template('forum/category.html')
 
@@ -32,9 +38,13 @@ def category_view(request, id):
         'threads': Thread.objects.filter(category=id)  # .order_by(lastModificationDate)
     }
 
-    return HttpResponse(template.render(context, request))
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
 
+@never_cache
 def thread_view(request, id):
     template = loader.get_template('forum/thread.html')
 
@@ -43,13 +53,17 @@ def thread_view(request, id):
         'posts': Entry.objects.filter(thread=id)
     }
 
-    return HttpResponse(template.render(context, request))
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
 
 class EntryFormView(View):
     form_class = EntryForm
     template_name = 'forum/thread.html'
 
+    @never_cache
     def get(self, request, id):
         form = self.form_class(None)
 
@@ -59,8 +73,12 @@ class EntryFormView(View):
             'form': form
         }
 
-        return render(request=request, template_name=self.template_name, context=entry_context)
+        if request.user.is_active:
+            return render(request=request, template_name=self.template_name, context=entry_context)
+        else:
+            return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
+    @never_cache
     def post(self, request, id):
         form = self.form_class(request.POST)
         active_user = request.user
@@ -86,7 +104,10 @@ class EntryFormView(View):
                     m = "New post in " + post.thread.subject
                     Notification.objects.create(target_user=active_user, message=m)
 
-                    return render(request=request, template_name=self.template_name, context=entry_context)
+                    if request.user.is_active:
+                        return render(request=request, template_name=self.template_name, context=entry_context)
+                    else:
+                        return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
 
 class ThreadFormView(View):
@@ -94,6 +115,7 @@ class ThreadFormView(View):
     template_name = 'forum/category.html'
     pid = 0
 
+    @never_cache
     def get(self, request, id):
         form = self.form_class(None)
 
@@ -103,8 +125,12 @@ class ThreadFormView(View):
             'form': form
         }
 
-        return render(request=request, template_name=self.template_name, context=context)
+        if request.user.is_active:
+            return render(request=request, template_name=self.template_name, context=context)
+        else:
+            return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
+    @never_cache
     def post(self, request, id):
         form = self.form_class(request.POST)
         active_user = request.user
@@ -136,6 +162,7 @@ class CategoryFormView(View):
     template_name = 'forum/index.html'
     pid = 0
 
+    @never_cache
     def get(self, request):
         form = self.form_class(None)
 
@@ -143,9 +170,12 @@ class CategoryFormView(View):
             'categories': Category.objects.all(),
             'form': form
         }
+        if request.user.is_active:
+            return render(request=request, template_name=self.template_name, context=context)
+        else:
+            return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
-        return render(request=request, template_name=self.template_name, context=context)
-
+    @never_cache
     def post(self, request):
         form = self.form_class(request.POST)
         active_user = request.user

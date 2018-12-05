@@ -20,7 +20,11 @@
         </tr>
     </Table>
     {% if user.is_superuser == True %}
+        <h3>You are administrator.</h3>
         <a href="/user/list">Go to list</a>
+    {% endif %}
+    {% if user.is_staff == True %}
+        <h3>You are staff.</h3>
     {% endif %}
 {% else %}
     <h1>Login first...</h1>

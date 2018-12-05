@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from django.template import loader
 from notification.models import Notification
+from django.views.decorators.cache import never_cache
 
 
-# Create your views here.
+@never_cache
 def index(request, id):
     template = loader.get_template('index.html')
 
@@ -13,4 +14,8 @@ def index(request, id):
         'notif': Notification.objects.filter(target_user=request.user, is_seen=False)
     }
 
-    return HttpResponse(template.render(context, request))
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
+

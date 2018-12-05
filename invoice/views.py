@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
+from django.views.decorators.cache import never_cache
 
 # Create your views here.
 from django.views import View
@@ -18,7 +19,7 @@ from notification.models import Notification
 class ReadAbleInvoice:
     pass
 
-
+@never_cache
 def index(request):
     template = loader.get_template('invoice/index.html')
 
@@ -26,7 +27,10 @@ def index(request):
         'invoices': Invoice.objects.filter()
     }
 
-    return HttpResponse(template.render(context, request))
+    if request.user.is_active:
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
 
 class InvoiceFormView(View):
@@ -34,6 +38,7 @@ class InvoiceFormView(View):
     template_name = 'invoice/index.html'
     pid = 0
 
+    @never_cache
     def get(self, request):
         form = self.form_class(None)
 
@@ -43,13 +48,15 @@ class InvoiceFormView(View):
 
                 context = {
                     'invoices': result_list,
-                    'form': form
+                    'form': form,
+                    'user': request.user
                 }
 
                 return render(request=request, template_name=self.template_name, context=context)
 
         return HttpResponse("<h1>UNAUTHORIZED</h1>")
 
+    @never_cache
     def post(self, request):
         form = self.form_class(request.POST, request.FILES)
         active_user = request.user
