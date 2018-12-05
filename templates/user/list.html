@@ -1,4 +1,4 @@
-{% if user.username != "admin" %}
+{% if user.is_superuser != True %}
     <h1>Nothing worth seeing here {{ user.username }}!</h1>
 {% else %}
     <h1>Administration view:</h1>
