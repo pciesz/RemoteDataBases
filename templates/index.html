@@ -1,8 +1,6 @@
-<h1>Welcome on the index page {{ user.username }}!</h1>
-<p>We might not be skilled with CCS but we do make solid things. Or so we think.</p>
 <div>
     {% if user.is_authenticated %}
-        <h2> You logged in successfully!</h2>
+        <h1>Welcome user: {{ user.username }}!</h1>
         <h3>Notifications : {{ notif | length }}</h3>
         {% for n in notif %}
             <ul>
@@ -25,6 +23,7 @@
         </ul>
         <a href="/user/logout/">logout</a>
     {% else %}
+        <h1>Access to the site is only for logged users</h1>
         <h2>Do you want to login or register?</h2>
         <a href="/user/login/">Login</a>
         <a href="/user/register/">Register</a>

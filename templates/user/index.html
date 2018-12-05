@@ -19,7 +19,7 @@
             <th>{{ user.email }}</th>
         </tr>
     </Table>
-    {% if user.username == "admin" %}
+    {% if user.is_superuser == True %}
         <a href="/user/list">Go to list</a>
     {% endif %}
 {% else %}

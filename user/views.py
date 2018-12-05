@@ -59,6 +59,9 @@ class UserFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('/')
+        else:
+            #return render(request, 'user/user_exist.html')
+            return HttpResponse("<h2>This user exist!</h2>")
 
 
 def Logout(request):
